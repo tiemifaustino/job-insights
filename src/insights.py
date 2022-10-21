@@ -51,7 +51,8 @@ def get_max_salary(path):
     max_salary = [
         int(salary["max_salary"])
         for salary in jobs_read
-        if salary["max_salary"] and salary["max_salary"] != "invalid"
+        if salary["max_salary"].isdigit()
+        # if salary["max_salary"] and salary["max_salary"] != "invalid"
     ]
     return max(max_salary)
 
