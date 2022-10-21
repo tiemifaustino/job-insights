@@ -56,8 +56,8 @@ def get_min_salary(path):
 
 def matches_salary_range(job, salary):
     if (
-        job.get("min_salary") is None
-        or job.get("max_salary") is None
+        job.get("min_salary") is None  # ou "min_salary" not in job
+        or job.get("max_salary") is None  # ou "max_salary" not in job
         or type(job["min_salary"]) != int
         or type(job["max_salary"]) != int
         or type(salary) != int
