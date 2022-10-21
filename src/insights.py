@@ -52,7 +52,6 @@ def get_max_salary(path):
         int(salary["max_salary"])
         for salary in jobs_read
         if salary["max_salary"].isdigit()
-        # if salary["max_salary"] and salary["max_salary"] != "invalid"
     ]
     return max(max_salary)
 
@@ -63,7 +62,7 @@ def get_min_salary(path):
     min_salary = [
         int(salary["min_salary"])
         for salary in jobs_read
-        if salary["min_salary"] and salary["min_salary"] != "invalid"
+        if salary["min_salary"].isdigit()
     ]
     return min(min_salary)
 
