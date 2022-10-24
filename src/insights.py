@@ -72,6 +72,8 @@ def filter_by_salary_range(jobs, salary):
         job
         for job in jobs
         if type(salary) is int
+        and type(job["min_salary"]) is int
+        and type(job["max_salary"]) is int
         and job["min_salary"] <= salary <= job["max_salary"]
     ]
 
